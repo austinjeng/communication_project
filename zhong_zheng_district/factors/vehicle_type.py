@@ -39,8 +39,9 @@ def get_vehicle_type_count(fileLocation: str):
     return dict_final
 
 
-draw_pie_chart(get_vehicle_type_count(
-    'zhong_zheng_district/zz_106_to_110.csv'))
+if __name__ == '__main__':
+    draw_pie_chart(get_vehicle_type_count(
+        'zhong_zheng_district/zz_106_to_110.csv'))
 
 '''
 B01 B02 B03 -> 小客車

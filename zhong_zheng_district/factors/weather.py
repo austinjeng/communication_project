@@ -12,13 +12,14 @@ weather_dict = {"1.0": "暴雨", "2.0": '強風', '3.0': '風沙',
 
 def getWeatherCount(file_location):
     df = pd.read_csv(file_location)
-    weather_list = (df['天候']).tolist()
+    weather_list = df['天候'].tolist()
     index = 0
     for i in weather_list:
         weather_list[index] = weather_dict.get(str(i))
         index += 1
     c = Counter(weather_list)
     c = dict(c)
+    print(c)
 
     return c
 

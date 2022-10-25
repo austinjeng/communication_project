@@ -1,7 +1,5 @@
-import pandas
-df = pandas.read_csv('110_A1_traffic_accident.csv')
-print(type(df['發生地點']))
-print(df['發生地點'].str.contains('台北市', regex=False))
+# -*- coding: utf-8 -*-
+import pandas as pd
+df = pd.read_csv('taipei_A1_A2_accidents/taipei_106_to_110.csv')
 
-df2 = df[df['發生地點'].str.contains('臺北市', regex=False)]
-df2.to_csv('output.csv')
+df.to_excel('output1.xlsx', index=False, index_label=False)

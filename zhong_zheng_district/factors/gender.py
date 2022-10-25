@@ -32,4 +32,5 @@ def draw_pie_chart(dict: dict):
     plt.show()
 
 
-draw_pie_chart(get_gender_count('zhong_zheng_district/zz_106_to_110.csv'))
+if __name__ == '__main__':
+    draw_pie_chart(get_gender_count('zhong_zheng_district/zz_106_to_110.csv'))

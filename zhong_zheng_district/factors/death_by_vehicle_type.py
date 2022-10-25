@@ -55,6 +55,8 @@ def draw_stack_bar_chart(l: list):
 if __name__ == '__main__':
     draw_stack_bar_chart(get_vehicle_type_count(
         'taipei_A1_A2_accidents/taipei_106_to_110.csv'))
+
+
 '''
 B01 B02 B03 -> 小客車
 C01 C02 C03 C04 C05 -> 機車
