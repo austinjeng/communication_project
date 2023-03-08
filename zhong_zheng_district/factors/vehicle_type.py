@@ -3,7 +3,7 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import matplotlib.font_manager
 
-matplotlib.rcParams['font.family'] = ['Heiti TC']
+#matplotlib.rcParams['font.family'] = ['Heiti TC']
 
 
 def draw_pie_chart(dict: dict):
@@ -18,6 +18,7 @@ def draw_pie_chart(dict: dict):
 
 def get_vehicle_type_count(fileLocation: str):
     data = pd.read_csv(fileLocation)
+    print(data.shape[0])
     l = data['車種'].tolist()
     c = Counter(l)
     c = dict(c)
@@ -41,7 +42,7 @@ def get_vehicle_type_count(fileLocation: str):
 
 if __name__ == '__main__':
     draw_pie_chart(get_vehicle_type_count(
-        'zhong_zheng_district/zz_106_to_110.csv'))
+        'taipei_A1_A2_accidents/taipei_106_to_110.csv'))
 
 '''
 B01 B02 B03 -> 小客車
