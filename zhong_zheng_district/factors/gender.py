@@ -11,6 +11,7 @@ def get_gender_count(file_location: str):
     weather_list = (df['性別']).tolist()
 
     c = Counter(weather_list)
+    print(c)
     counter_dict = dict(c)
 
     parsed_dict = {k: v for k, v in counter_dict.items() if k in [
@@ -33,4 +34,5 @@ def draw_pie_chart(dict: dict):
 
 
 if __name__ == '__main__':
-    draw_pie_chart(get_gender_count('zhong_zheng_district/zz_106_to_110.csv'))
+    # draw_pie_chart(get_gender_count('zhong_zheng_district/zz_106_to_110.csv'))
+    print(get_gender_count('taipei_A1_A2_accidents/taipei_101_to_108.csv'))
